@@ -9,4 +9,8 @@ def all_blogs(request):
 
 def detail(request, blog_id):
     blog = get_object_or_404(Blog, pk=blog_id)
-    return render(request, 'blog/detail.html', {'id': blog})
+    return render(request, 'blog/detail.html', {'blog': blog})
+
+
+def info(request, id):
+    return render(request, info)
